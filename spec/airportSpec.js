@@ -32,13 +32,16 @@ describe('Airport', function(){
     it('can check for stormy conditions', function() {
       expect(airport.isStormy()).toBeFalsy();
     });
+    it('has a default capacity', function(){
+      expect(airport.DEFAULTCAPACITY).toEqual(5)
+    })
   });
 
   describe('under stormy conditions', function(){
     var airport;
     var plane;
     beforeEach(function(){
-      airport = new Airport();
+      airport = new Airport(weather);
       plane = jasmine.createSpy('plane');
       weather.isStormy.and.returnValue(true);
     });
