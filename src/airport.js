@@ -4,7 +4,6 @@
 function Airport(weather){
   this._weather = typeof weather !== 'undefined' ? weather : new Weather();
   this._hangar = [];
-  DEFAULTCAPACITY = 5;
 }
 Airport.prototype.planes = function(){
   return this._hangar;

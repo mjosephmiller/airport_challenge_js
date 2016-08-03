@@ -32,9 +32,6 @@ describe('Airport', function(){
     it('can check for stormy conditions', function() {
       expect(airport.isStormy()).toBeFalsy();
     });
-    it('has a default capacity', function(){
-      expect(airport.DEFAULTCAPACITY).toEqual(5)
-    })
   });
 
   describe('under stormy conditions', function(){
